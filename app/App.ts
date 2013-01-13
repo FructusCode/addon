@@ -15,8 +15,7 @@ chrome.extension.onMessage.addListener((request, sender, sendResponse) => {
 
 class App {
     constructor(url:string, pagecontent:string) {
-        alert(url);
         var contentParser = ContentParserRegistry.getParser(url);
-        alert(contentParser.parse(pagecontent).result);
+        
     }
 }
