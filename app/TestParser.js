@@ -1,19 +1,14 @@
-var Shapes;
-(function (Shapes) {
-
-    var Point = Shapes.Point = (function () {
-        function Point(x, y) {
-            this.x = x;
-            this.y = y;
-        }
-        Point.prototype.getDist = function () {
-            return Math.sqrt((this.x * this.x) + (this.y * this.y));
-        };
-        Point.origin = new Point(0, 0);
-        return Point;
-    })();
-
-})(Shapes || (Shapes = {}));
-
-var p = new Shapes.Point(3, 4);
-var dist = p.getDist(); 
+var TestParser = (function () {
+    function TestParser() { }
+    TestParser.prototype.name = function () {
+        return "Test Parser";
+    };
+    TestParser.prototype.matches = function (url) {
+        return true;
+    };
+    TestParser.prototype.parse = function (html) {
+        return new ParseResult("test parser, WHAT THE FUCK ARE YOU DOING", ParseResultType.GAME);
+    };
+    return TestParser;
+})();
+//@ sourceMappingURL=TestParser.js.map

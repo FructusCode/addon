@@ -1,9 +1,9 @@
 /// <reference path="../App.ts" />
 class ContentParserRegistry {
-    registeredContentParsers:ContentParser[] = [];
+    static registeredContentParsers:ContentParser[] = [];
 
     static registerParser(toRegister:ContentParser) {
-        this.registeredContentScrapers.push(toRegister);
+        registeredContentParsers.push(toRegister);
     }
 
     static parserExists(url:string) {
@@ -11,10 +11,14 @@ class ContentParserRegistry {
     }
 
     static getParser(url: string):ContentParser {
-        for(var i = 0;i < this.registeredContentScrapers.length;i++) {
-            if(this.registeredContentScrapers[i].matches(url))
-                return this.registeredContentScrapers[i];
+        for(var i = 0;i < this.registeredContentParsers.length;i++) {
+            if(this.registeredContentParsers[i].matches(url))
+                return this.registeredContentParsers[i];
         }
         return null;
+    }
+
+    static unloadParsers() {
+        registeredContentParsers = []
     }
 }

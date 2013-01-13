@@ -9,6 +9,6 @@ class TestParser implements ContentParser {
     }
 
     parse(html: string):ParseResult {
-        return new ParseResult("test parser", ParseResultType.GAME);
+        return new ParseResult("test parser, WHAT THE FUCK ARE YOU DOING", ParseResultType.GAME);
     }
 }

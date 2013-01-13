@@ -1,11 +1,17 @@
 {
 	"background": {
         "persistent": false,
-        "scripts": [ "background.js" ]
+        "page": "background.html"
     },
+	"content_scripts": [
+		{
+			"matches": [ "http://*/*", "https://*/*" ],
+			"js": ["bootstrap.js"] 
+		}
+	],
 	"description": "blah blah blah",
     "manifest_version": 2,
-    "name": "Piracy Donation Addon",
+    "name": "Piracy Donation Addonaaaa",
 	"permissions": [ "http://*/*", "https://*/*", "tabs", "storage" ],
     "version": "0.1",
 	"web_accessible_resources": [  ]

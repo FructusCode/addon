@@ -21,24 +21,33 @@
     <UpgradeBackupLocation />
   </PropertyGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="background.ts" />
-    <Content Include="background.js">
-      <DependentUpon>background.ts</DependentUpon>
+    <Content Include="bootstrap.js" />
+    <TypeScriptCompile Include="app\contentregistry\ParseResult.ts" />
+    <Content Include="app\contentregistry\ParseResult.js">
+      <DependentUpon>ParseResult.ts</DependentUpon>
     </Content>
-    <TypeScriptCompile Include="contentregistry\Registry.ts" />
-    <TypeScriptCompile Include="contentregistry\ContentParser.ts" />
-    <Content Include="contentregistry\ContentParser.js">
+    <Content Include="app\TestParser.js">
+      <DependentUpon>TestParser.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="app\TestParser.ts" />
+    <Content Include="background.html" />
+    <TypeScriptCompile Include="app\contentregistry\Registry.ts" />
+    <TypeScriptCompile Include="app\contentregistry\ContentParser.ts" />
+    <Content Include="app\contentregistry\ContentParser.js">
       <DependentUpon>ContentParser.ts</DependentUpon>
     </Content>
-    <Content Include="contentregistry\ContentParserRegistry.js">
+    <Content Include="app\contentregistry\ContentParserRegistry.js">
       <DependentUpon>Registry.ts</DependentUpon>
     </Content>
-    <Content Include="app.js">
-      <DependentUpon>app.ts</DependentUpon>
+    <Content Include="app\app.js">
+      <DependentUpon>App.ts</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="app\App.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="manifest.json" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
