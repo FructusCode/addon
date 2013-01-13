@@ -1,4 +1,4 @@
-/// <reference path="app.ts" />
+/// <reference path="App.ts" />
 class TestParser implements ContentParser {
     name() {
         return "Test Parser";
@@ -9,6 +9,6 @@ class TestParser implements ContentParser {
     }
 
     parse(html: string):ParseResult {
-        return new ParseResult("", ParseResultType.GAME);
+        return new ParseResult("test parser", ParseResultType.GAME);
     }
 }
