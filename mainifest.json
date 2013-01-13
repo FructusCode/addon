@@ -1,0 +1,13 @@
+{
+    "manifest_version": 2,
+
+    "name": "Piracy Donation Addon",
+    "description": "blah blah blah",
+    "version": "0.1",
+    "permissions": [ "http://*/*", "https://*/*", "tabs", "storage" ],
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "background": {
+        "persistent": false,
+        "scripts": [ "background.js" ]
+    }
+}
