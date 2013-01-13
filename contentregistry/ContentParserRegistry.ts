@@ -1,3 +1,4 @@
+/// <reference path="../App.ts" />
 /**
  * Created with IntelliJ IDEA.
  * User: UberMouse
@@ -7,15 +8,15 @@
  */
 module ContentRegistry {
     export class ContentParserRegistry {
-        var registeredContentScrapers:ContentParser[] = [];
+        registeredContentScrapers:ContentParser[] = [];
 
         static registerContentScraper(toRegister:ContentParser) {
-            registeredContentScrapers[toRegister.name] = toRegister;
+            this.registeredContentScrapers.push(toRegister);
         }
 
         static scraperExists(url:string) {
-            for(var i = 0;i < registeredContentScrapers.length;i++) {
-                if(registeredContentScrapers[i].matches(url))
+            for(var i = 0;i < this.registeredContentScrapers.length;i++) {
+                if(this.registeredContentScrapers[i].matches(url))
                     return true;
             }
             return false;

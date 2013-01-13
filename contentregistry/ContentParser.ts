@@ -1,3 +1,4 @@
+/// <reference path="../App.ts" />
 /**
  * Created with IntelliJ IDEA.
  * User: UberMouse
