@@ -1,19 +1,9 @@
-var Shapes;
-(function (Shapes) {
-
-    var Point = Shapes.Point = (function () {
-        function Point(x, y) {
-            this.x = x;
-            this.y = y;
+chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+    var url = tab.url;
+    if(url.indexOf("http://") == -1 && url.indexOf("https://") == -1) {
+    } else {
+        if(ContentParserRegistry.Registry.scraperExists(url)) {
         }
-        Point.prototype.getDist = function () {
-            return Math.sqrt((this.x * this.x) + (this.y * this.y));
-        };
-        Point.origin = new Point(0, 0);
-        return Point;
-    })();
-
-})(Shapes || (Shapes = {}));
-
-var p = new Shapes.Point(3, 4);
-var dist = p.getDist(); 
+    }
+});
+//@ sourceMappingURL=background.js.map

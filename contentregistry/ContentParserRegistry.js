@@ -1,19 +1,22 @@
-var Shapes;
-(function (Shapes) {
-
-    var Point = Shapes.Point = (function () {
-        function Point(x, y) {
-            this.x = x;
-            this.y = y;
+var ContentRegistry;
+(function (ContentRegistry) {
+    var ContentParserRegistry = (function () {
+        function ContentParserRegistry() {
+            this.registeredContentScrapers = [];
         }
-        Point.prototype.getDist = function () {
-            return Math.sqrt((this.x * this.x) + (this.y * this.y));
-        };
-        Point.origin = new Point(0, 0);
-        return Point;
+        ContentParserRegistry.registerContentScraper = function registerContentScraper(toRegister) {
+            this.registeredContentScrapers.push(toRegister);
+        }
+        ContentParserRegistry.scraperExists = function scraperExists(url) {
+            for(var i = 0; i < this.registeredContentScrapers.length; i++) {
+                if(this.registeredContentScrapers[i].matches(url)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        return ContentParserRegistry;
     })();
-
-})(Shapes || (Shapes = {}));
-
-var p = new Shapes.Point(3, 4);
-var dist = p.getDist(); 
+    ContentRegistry.ContentParserRegistry = ContentParserRegistry;    
+})(ContentRegistry || (ContentRegistry = {}));
+//@ sourceMappingURL=ContentParserRegistry.js.map

@@ -2,4 +2,6 @@
 
 ///Content Registry
 /// <reference path="contentregistry/ContentParser.ts" />
-/// <reference path="contentregistry/ContentParserRegistry.ts" />
+/// <reference path="contentregistry/Registry.ts" />
+/// <reference path="contentregistry/ParseResult.ts" />
+var contentParser = ContentParserRegistry.getParser(window.location.href);
