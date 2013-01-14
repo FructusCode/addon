@@ -1,13 +1,12 @@
 ContentParserRegistry.unloadParsers();
-ContentParserRegistry.registerParser(new TestParser());
+ContentParserRegistry.registerParser(new LastFM());
 chrome.extension.onMessage.addListener(function (request, sender, sendResponse) {
     new App(request.url, request.pagecontent);
 });
 var App = (function () {
     function App(url, pagecontent) {
-        alert(url);
         var contentParser = ContentParserRegistry.getParser(url);
-        alert(contentParser.parse(pagecontent).result);
+        alert(pagecontent.html());
     }
     return App;
 })();

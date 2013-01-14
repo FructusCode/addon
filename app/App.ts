@@ -4,9 +4,12 @@
 /// <reference path="contentregistry/ParseResult.ts" />
 
 ///Parsers
-/// <reference path="TestParser.ts" />
+/// <reference path="parsers/LastFM.ts" />
+
+///Library Definitions
+/// <reference path="lib/jquery.1.8.3.min.d.ts" />
 ContentParserRegistry.unloadParsers();
-ContentParserRegistry.registerParser(new TestParser());
+ContentParserRegistry.registerParser(new LastFM());
 declare var chrome: any;
 
 chrome.extension.onMessage.addListener((request, sender, sendResponse) => {
@@ -14,8 +17,8 @@ chrome.extension.onMessage.addListener((request, sender, sendResponse) => {
 });
 
 class App {
-    constructor(url:string, pagecontent:string) {
+    constructor(url:string, pagecontent:JQuery) {
         var contentParser = ContentParserRegistry.getParser(url);
-        
+        alert(pagecontent.html());
     }
 }

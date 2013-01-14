@@ -2,5 +2,5 @@
 interface ContentParser {
     name(): string;
     matches(url: string): bool;
-    parse(html: string): ParseResult;
+    parse(page: JQuery, url:string): ParseResult;
 }
