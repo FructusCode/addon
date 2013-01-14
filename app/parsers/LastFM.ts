@@ -15,11 +15,11 @@ class LastFM implements ContentParser {
     }
 
     parse(url:string, page: JQuery) {
-        var info = url.split("/").splice(0, 2).map((value, index, array) => value.replace("+", " "));
+        var info = url.split("/").splice(4).map((value, index, array) => value.replace("+", " "));
         var result = {
             artist: info[0],
             album: info.length > 1 ? info[1] : null,
-            tracK: info.length > 2 ? info[2] : null
+            track: info.length > 2 ? info[2] : null
         };
         return new ParseResult(JSON.stringify(result), ParseResultType.MUSIC);
     }

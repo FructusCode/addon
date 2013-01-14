@@ -6,7 +6,7 @@
 	"content_scripts": [
 		{
 			"matches": [ "http://*/*", "https://*/*" ],
-			"js": ["bootstrap.js"] 
+			"js": ["shared/lib/jquery.1.8.3.min.js", "bootstrap.js" ] 
 		}
 	],
 	"description": "blah blah blah",

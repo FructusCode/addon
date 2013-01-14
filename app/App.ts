@@ -13,12 +13,13 @@ ContentParserRegistry.registerParser(new LastFM());
 declare var chrome: any;
 
 chrome.extension.onMessage.addListener((request, sender, sendResponse) => {
-    new App(request.url, request.pagecontent);
+    new App(request.url, $(request.pagecontent));
 });
 
 class App {
     constructor(url:string, pagecontent:JQuery) {
         var contentParser = ContentParserRegistry.getParser(url);
-        alert(pagecontent.html());
+        if(contentParser == null) return;
+        var result = contentParser.parse(url, pagecontent);
     }
 }

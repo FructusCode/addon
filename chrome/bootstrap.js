@@ -1,1 +1,1 @@
-﻿window.onload = function () { chrome.extension.sendMessage({ url: window.location.href, pagecontent: $("body") }, function () { }); };
+﻿chrome.extension.sendMessage({ url: window.location.href, pagecontent: $("body").html() }, function () { });

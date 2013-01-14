@@ -15,14 +15,14 @@ var LastFM = (function () {
         }
         return true;
     };
-    LastFM.prototype.parse = function (page, url) {
-        var info = url.split("/").splice(0, 2).map(function (value, index, array) {
+    LastFM.prototype.parse = function (url, page) {
+        var info = url.split("/").splice(4).map(function (value, index, array) {
             return value.replace("+", " ");
         });
         var result = {
             artist: info[0],
             album: info.length > 1 ? info[1] : null,
-            tracK: info.length > 2 ? info[2] : null
+            track: info.length > 2 ? info[2] : null
         };
         return new ParseResult(JSON.stringify(result), ParseResultType.MUSIC);
     };
