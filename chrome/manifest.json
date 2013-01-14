@@ -6,7 +6,8 @@
 	"content_scripts": [
 		{
 			"matches": [ "http://*/*", "https://*/*" ],
-			"js": ["shared/lib/jquery.1.8.3.min.js", "bootstrap.js" ] 
+			"js": ["shared/lib/jquery.1.8.3.min.js", "bootstrap.js" ], 
+			"css": ["shared/ribbon.css"]
 		}
 	],
 	"description": "blah blah blah",

@@ -21,5 +21,6 @@ class App {
         var contentParser = ContentParserRegistry.getParser(url);
         if(contentParser == null) return;
         var result = contentParser.parse(url, pagecontent);
+       
     }
 }
