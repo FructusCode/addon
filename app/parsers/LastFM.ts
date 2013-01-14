@@ -5,12 +5,22 @@ class LastFM implements ContentParser {
     }
 
     matches(url: string) {
+        if (!url.match(".*last\.fm/music/[a-zA-Z0-9/]*")) return false;
+        var split = url.split("/");
+        for (var i = 0; i < split.length; i++) {
+            if(split[i].charAt(0) == "+")
+                return false;
+        }
         return true;
     }
 
     parse(page: JQuery, url:string) {
-        
-        return new ParseResult("", ParseResultType.MUSIC);
+        var info = url.split("/").splice(0, 2);
+        var result = {
+            artist: info[0],
+            album: info.length > 1 ? info[1] : null,
+            tracK: info.length > 2 ? info[2] : null
+        };
+        return new ParseResult(JSON.stringify(result), ParseResultType.MUSIC);
     }
-
 }
