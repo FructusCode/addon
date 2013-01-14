@@ -14,7 +14,7 @@ class LastFM implements ContentParser {
         return true;
     }
 
-    parse(page: JQuery, url:string) {
+    parse(url:string, page: JQuery) {
         var info = url.split("/").splice(0, 2).map((value, index, array) => value.replace("+", " "));
         var result = {
             artist: info[0],
