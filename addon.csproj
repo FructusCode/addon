@@ -22,12 +22,13 @@
   </PropertyGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\parsers\LastFM.ts" />
-    <Content Include="app\lib\jquery-1.8.3.min.js" />
+    <Content Include="app\images\icon.png" />
     <Content Include="app\lib\jquery.1.8.3.min.d.ts" />
+    <Content Include="app\lib\jquery.1.8.3.min.js" />
     <Content Include="app\parsers\LastFM.js">
       <DependentUpon>LastFM.ts</DependentUpon>
     </Content>
-    <Content Include="chrome\bootstrap.js" />
+    <Content Include="app\ribbon.css" />
     <TypeScriptCompile Include="app\contentregistry\ParseResult.ts" />
     <Content Include="app\contentregistry\ParseResult.js">
       <DependentUpon>ParseResult.ts</DependentUpon>
@@ -79,9 +80,6 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-    <TypeScriptSourceMap> --sourcemap</TypeScriptSourceMap>
-  </PropertyGroup>
   <Target Name="BeforeBuild">
     <Message Text="Compiling TypeScript files" />
     <Message Text="Executing tsc$(TypeScriptSourceMap) @(TypeScriptCompile ->'&quot;%(fullpath)&quot;', ' ')" />

@@ -1,2 +1,11 @@
-﻿body {
+﻿#ribbon {
+    position:fixed;
+    right:5px;
+    top:50px;
+    background-color:azure;
+    border:1px solid blue;
+}
+
+#ribbonIcon {
+    
 }

@@ -24,8 +24,7 @@ var LastFM = (function () {
             album: info.length > 1 ? info[1] : null,
             track: info.length > 2 ? info[2] : null
         };
-        return new ParseResult(JSON.stringify(result), ParseResultType.MUSIC);
+        return new ParseResult(result, ParseResultType.MUSIC);
     };
     return LastFM;
 })();
-//@ sourceMappingURL=LastFM.js.map

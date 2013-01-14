@@ -21,6 +21,6 @@ class LastFM implements ContentParser {
             album: info.length > 1 ? info[1] : null,
             track: info.length > 2 ? info[2] : null
         };
-        return new ParseResult(JSON.stringify(result), ParseResultType.MUSIC);
+        return new ParseResult(result, ParseResultType.MUSIC);
     }
 }

@@ -20,4 +20,3 @@ var ContentParserRegistry = (function () {
     }
     return ContentParserRegistry;
 })();
-//@ sourceMappingURL=Registry.js.map

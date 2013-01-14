@@ -1,13 +1,13 @@
 {
-	"background": {
-        "persistent": false,
-        "page": "background.html"
-    },
 	"content_scripts": [
 		{
 			"matches": [ "http://*/*", "https://*/*" ],
-			"js": ["shared/lib/jquery.1.8.3.min.js", "bootstrap.js" ], 
-			"css": ["shared/ribbon.css"]
+			"css": ["shared/ribbon.css"],
+			"js": ["shared/parsers/LastFM.js", 
+				   "shared/lib/jquery.1.8.3.min.js", 
+				   "shared/contentregistry/Registry.js", 
+				   "shared/contentregistry/ParseResult.js",
+				   "shared/App.js"]
 		}
 	],
 	"description": "blah blah blah",
@@ -15,5 +15,5 @@
     "name": "Piracy Donation Addonaaaa",
 	"permissions": [ "http://*/*", "https://*/*", "tabs", "storage" ],
     "version": "0.1",
-	"web_accessible_resources": [  ]
+	"web_accessible_resources": ["shared/images/icon.png"  ]
 }

@@ -19,4 +19,3 @@ var ParseResult = (function () {
     }
     return ParseResult;
 })();
-//@ sourceMappingURL=ParseResult.js.map

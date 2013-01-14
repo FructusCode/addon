@@ -8,10 +8,10 @@ enum ParseResultType {
 }
 
 class ParseResult {
-    public result: string;
+    public result: any;
     public resultType: ParseResultType;
 
-    constructor(result: string, resultType: ParseResultType) {
+    constructor(result: any, resultType: ParseResultType) {
         this.result = result;
         this.resultType = resultType;
     }
