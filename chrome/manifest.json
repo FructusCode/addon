@@ -9,6 +9,7 @@
 				   "shared/contentregistry/Registry.js", 
 				   "shared/contentregistry/ContentType.js",
 				   "shared/Config.js",
+				   "shared/Ribbon.js",
 				   "shared/App.js"]
 		}
 	],
