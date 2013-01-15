@@ -6,7 +6,8 @@
 			"js": ["shared/parsers/LastFM.js", 
 				   "shared/lib/jquery.1.8.3.min.js", 
 				   "shared/contentregistry/Registry.js", 
-				   "shared/contentregistry/ParseResult.js",
+				   "shared/contentregistry/ContentType.js",
+				   "shared/Config.js",
 				   "shared/App.js"]
 		}
 	],
