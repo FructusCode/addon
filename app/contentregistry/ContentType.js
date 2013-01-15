@@ -4,5 +4,6 @@ var ContentType = (function () {
     ContentType.MOVIE = 1;
     ContentType.MUSIC = 2;
     ContentType.GAME = 3;
+    ContentType.TAG = 4;
     return ContentType;
 })();

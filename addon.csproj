@@ -37,6 +37,10 @@
       <DependentUpon>LastFM.ts</DependentUpon>
     </Content>
     <TypeScriptCompile Include="app\parsers\Trakt.ts" />
+    <TypeScriptCompile Include="app\parsers\TagParser.ts" />
+    <Content Include="app\parsers\TagParser.js">
+      <DependentUpon>TagParser.ts</DependentUpon>
+    </Content>
     <Content Include="app\parsers\Trakt.js">
       <DependentUpon>Trakt.ts</DependentUpon>
     </Content>
