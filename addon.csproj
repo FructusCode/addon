@@ -36,6 +36,10 @@
     <Content Include="app\parsers\LastFM.js">
       <DependentUpon>LastFM.ts</DependentUpon>
     </Content>
+    <TypeScriptCompile Include="app\parsers\Trakt.ts" />
+    <Content Include="app\parsers\Trakt.js">
+      <DependentUpon>Trakt.ts</DependentUpon>
+    </Content>
     <Content Include="app\ribbon.css" />
     <Content Include="chrome\background.html" />
     <TypeScriptCompile Include="app\contentregistry\Registry.ts" />

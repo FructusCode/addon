@@ -1,5 +1,6 @@
 ContentParserRegistry.unloadParsers();
 ContentParserRegistry.registerParser(new LastFM());
+ContentParserRegistry.registerParser(new Trakt());
 var App = (function () {
     function App(url, pagecontent) {
         var contentParser = ContentParserRegistry.getParser(url);

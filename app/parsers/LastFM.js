@@ -4,7 +4,7 @@ var LastFM = (function () {
         return "Last.FM";
     };
     LastFM.prototype.matches = function (url) {
-        if(!url.match(".*last\.fm/music/[a-zA-Z0-9/]*")) {
+        if(url.match(".*last\.fm/music/[a-zA-Z0-9/]*") == null) {
             return false;
         }
         var split = url.split("/");

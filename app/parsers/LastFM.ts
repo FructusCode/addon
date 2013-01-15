@@ -5,7 +5,7 @@ class LastFM implements ContentParser {
     }
 
     matches(url: string) {
-        if (!url.match(".*last\.fm/music/[a-zA-Z0-9/]*")) return false;
+        if (url.match(".*last\.fm/music/[a-zA-Z0-9/]*") == null) return false;
         var split = url.split("/");
         for (var i = 0; i < split.length; i++) {
             if(split[i].charAt(0) == "+")

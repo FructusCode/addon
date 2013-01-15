@@ -15,6 +15,7 @@ declare var chrome: any;
 
 ContentParserRegistry.unloadParsers();
 ContentParserRegistry.registerParser(new LastFM());
+ContentParserRegistry.registerParser(new Trakt());
 
 class App {
     static contentOwner: string = null;
