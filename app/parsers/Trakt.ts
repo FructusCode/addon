@@ -5,13 +5,15 @@ class Trakt implements ContentParser {
     }
 
     matches(url: string) {
-        return url.match(".*trakt.tv/show/.*") != null;
+        return url.match(".*trakt.tv/(show||movie)/.*") != null;
     }
 
     parse(url: string, page: JQuery) {
+        var text = page.find("#header > ul > li > a.current").text();
+        var type = text == "Movies" ? ContentType.MOVIE : ContentType.TV_SHOW
         return {
-            type: ContentType.TV_SHOW,
-            title: url.match("show/.*/?")[0].split("/")[1]
+            type: type,
+            title: url.match("(show||movie)/.*/?")[0].split("/")[1]
         }
     }
 }
