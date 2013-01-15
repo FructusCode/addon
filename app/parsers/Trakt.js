@@ -7,10 +7,8 @@ var Trakt = (function () {
         return url.match(".*trakt.tv/(show||movie)/.*") != null;
     };
     Trakt.prototype.parse = function (url, page) {
-        var text = page.find("#header > ul > li > a.current").text();
-        var type = text == "Movies" ? ContentType.MOVIE : ContentType.TV_SHOW;
         return {
-            type: type,
+            type: page.find("#header > ul > li > a.current").text() == "Movies" ? ContentType.MOVIE : ContentType.TV_SHOW,
             title: url.match("(show||movie)/.*/?")[0].split("/")[1]
         };
     };

@@ -9,10 +9,8 @@ class Trakt implements ContentParser {
     }
 
     parse(url: string, page: JQuery) {
-        var text = page.find("#header > ul > li > a.current").text();
-        var type = text == "Movies" ? ContentType.MOVIE : ContentType.TV_SHOW
         return {
-            type: type,
+            type: page.find("#header > ul > li > a.current").text() == "Movies" ? ContentType.MOVIE : ContentType.TV_SHOW,
             title: url.match("(show||movie)/.*/?")[0].split("/")[1]
         }
     }
