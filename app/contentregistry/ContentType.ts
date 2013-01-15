@@ -3,4 +3,5 @@ class ContentType {
     static MOVIE = 1;
     static MUSIC = 2;
     static GAME = 3;
+    static TAG = 4;
 }

@@ -5,6 +5,8 @@
 
 ///Parsers
 /// <reference path="parsers/LastFM.ts" />
+/// <reference path="parsers/Trakt.ts" />
+/// <reference pat="parsers/TagParser.ts" />
 
 ///Misic
 /// <reference path="Config.ts" />
@@ -16,6 +18,7 @@ declare var chrome: any;
 ContentParserRegistry.unloadParsers();
 ContentParserRegistry.registerParser(new LastFM());
 ContentParserRegistry.registerParser(new Trakt());
+ContentParserRegistry.registerParser(new TagParser());
 
 class App {
     static contentOwner: string = null;
@@ -24,6 +27,7 @@ class App {
         var contentParser = ContentParserRegistry.getParser(url);
         if(contentParser == null) return;
         var result = contentParser.parse(url, pagecontent);
+        if(result == null) return;
         $.get(Config.WEBSERVER_URL + Config.SEARCH_ENDPOINT, { argv: JSON.stringify(result) }, function (response) {
             if(response.success == true)
                 App.contentOwner = response.items[0].recipients[0].title
