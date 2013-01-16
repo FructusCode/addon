@@ -1,6 +1,5 @@
 var data = require("self").data;
 var pageMod = require("page-mod");
-console.log("main");
 pageMod.PageMod({
     include: "*",
     contentStyleFile: data.url("shared/ribbon.css"),

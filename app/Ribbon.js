@@ -16,7 +16,6 @@ var Ribbon = (function () {
     }
     Ribbon.inject = function inject(contentCreator, expanded) {
         if (typeof expanded === "undefined") { expanded = true; }
-        console.log("inject");
         if(contentCreator == null) {
             return;
         }

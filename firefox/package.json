@@ -1,11 +1,11 @@
 {
-    "name": "aprojectwithoutaname", 
+    "name": "fructus", 
     "license": "MPL 2.0", 
     "author": "", 
     "version": "0.1", 
     "dependencies": [
     ],
-    "fullName": "AProjectWithoutAName", 
+    "fullName": "Fructus", 
     "id": "jid1-oxgQ2jdBNTMx0Q", 
-    "description": "AProjectWithoutAName"
+    "description": "Fructus"
 }

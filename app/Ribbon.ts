@@ -13,7 +13,6 @@ class Ribbon {
     }
 
     static private inject(contentCreator:string, expanded:bool = true) {
-        console.log("inject");
         if(contentCreator == null) return;
         $("#ribbon").remove();
         $("body").append("<div id='ribbon' style='width:64px;height:64px;z-index:999999;'></div>"); 
