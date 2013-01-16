@@ -19,6 +19,7 @@ var Ribbon = (function () {
         if(contentCreator == null) {
             return;
         }
+        console.log(Utils.url("shared/images/icon.png"));
         $("#ribbon").remove();
         $("body").append("<div id='ribbon' style='width:64px;height:64px;z-index:999999;'></div>");
         $("#ribbon").html("<a href='javascript:void(0)' id='ribbon-link'><img src='" + Utils.url("shared/images/icon.png") + "' id='ribbon-icon'/></a>");

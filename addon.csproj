@@ -67,6 +67,10 @@
     <Content Include="app\Utils.js">
       <DependentUpon>Utils.ts</DependentUpon>
     </Content>
+    <TypeScriptCompile Include="chrome\load.ts" />
+    <Content Include="chrome\load.js">
+      <DependentUpon>load.ts</DependentUpon>
+    </Content>
     <Content Include="chrome\manifest.json" />
   </ItemGroup>
   <ItemGroup>

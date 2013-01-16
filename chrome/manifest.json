@@ -10,7 +10,9 @@
 				   "shared/contentregistry/ContentType.js",
 				   "shared/Config.js",
 				   "shared/Ribbon.js",
-				   "shared/App.js"]
+				   "shared/Utils.js",
+				   "shared/App.js",
+				   "load.js"]
 		}
 	],
 	"description": "blah blah blah",
