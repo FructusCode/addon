@@ -15,9 +15,9 @@
 				   "load.js"]
 		}
 	],
-	"description": "blah blah blah",
+	"description": "Fructus",
     "manifest_version": 2,
-    "name": "Piracy Donation Addonaaaa",
+    "name": "Fructus",
 	"permissions": [ "http://*/*", "https://*/*", "tabs", "storage" ],
     "version": "0.1",
 	"web_accessible_resources": ["shared/images/icon.png"  ]
