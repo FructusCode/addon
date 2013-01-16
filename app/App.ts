@@ -10,6 +10,7 @@
 ///Misc
 /// <reference path="Config.ts" />
 /// <reference path="Ribbon.ts" />
+/// <reference path="Utils.ts" />
 
 ///Library Definitions
 /// <reference path="lib/jquery.1.8.3.min.d.ts" />
@@ -68,5 +69,3 @@ class App {
         Ribbon.create(result, false);
     }
 }
-
-new App(window.location.href, $("body"));

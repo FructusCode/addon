@@ -21,6 +21,8 @@
     <UpgradeBackupLocation />
   </PropertyGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="firefox\data\load.ts" />
+    <TypeScriptCompile Include="firefox\lib\main.ts" />
     <TypeScriptCompile Include="app\parsers\LastFM.ts" />
     <TypeScriptCompile Include="app\contentregistry\ContentType.ts" />
     <TypeScriptCompile Include="app\Config.ts" />
@@ -61,7 +63,14 @@
     <TypeScriptCompile Include="app\App.ts" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="app\Utils.ts" />
+    <Content Include="app\Utils.js">
+      <DependentUpon>Utils.ts</DependentUpon>
+    </Content>
     <Content Include="chrome\manifest.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="firefox\package.json" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
